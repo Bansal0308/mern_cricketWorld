@@ -35,6 +35,7 @@ app.use("/api/v1", user);
 app.use("/api/v1", order);
 app.use("/api/v1", payment);
 
+const PORT = process.env.PORT || 5000;
 
 
 const __dirname1 = path.resolve();
