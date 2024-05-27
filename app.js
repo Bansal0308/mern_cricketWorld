@@ -40,16 +40,22 @@ app.use("/api/v1", payment);
 
 const __dirname1 = path.resolve();
 
-app.use(express.static(path.join(__dirname1, "frotend/build")));
+// app.use(express.static(path.join(__dirname1, "frotend/build")));
 
-// app.get("*", (req, res) =>
-//   res.sendFile(path.resolve(__dirname1, "frotend", "build", "index.html"))
+// // app.get("*", (req, res) =>
+// //   res.sendFile(path.resolve(__dirname1, "frotend", "build", "index.html"))
     
-// );
+// // );
+
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'frotend/build', 'index.html'));
+// });
+
+
+app.use(express.static(path.join(__dirname1, "frontend/build")));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'frotend/build', 'index.html'));
+  res.sendFile(path.join(__dirname1, 'frontend/build', 'index.html'));
 });
-
 
 module.exports = app;
