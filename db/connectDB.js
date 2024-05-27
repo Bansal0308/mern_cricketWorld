@@ -7,7 +7,7 @@ function connectDB(){
     mongoose.set("strictQuery", false); 
   
     mongoose   
-    .connect(process.env.MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true }) 
+    .connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true }) 
     .then(function () {
         console.log("DB connected");
     })
