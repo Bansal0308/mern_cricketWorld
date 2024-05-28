@@ -7,7 +7,7 @@ function connectDB(){
     mongoose.set("strictQuery", false); 
   
     mongoose   
-    .connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true }) 
+    .connect("mongodb+srv://anurag0235be21:dEavpq3nOLwmIRWx@cluster0.lkfaqrc.mongodb.net/anurag?retryWrites=true&w=majority&appName=Cluster0/anurag", { useNewUrlParser: true, useUnifiedTopology: true }) 
     .then(function () {
         console.log("DB connected");
     })
